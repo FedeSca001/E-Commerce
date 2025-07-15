@@ -6,7 +6,7 @@ import UserState from './UserState.vue';
 </script>
 
 <template>
-    <div>
+    <div class="header-container">
         <div>Company Name</div>
         <SearchComponent />
         <UserState />
@@ -15,5 +15,10 @@ import UserState from './UserState.vue';
 </template>
 
 <style scoped>
-
+.header-container {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content:center;
+}
 </style>

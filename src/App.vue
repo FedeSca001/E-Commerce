@@ -19,20 +19,16 @@ import HeaderComponent from './components/Header/HeaderComponent.vue';
 
 <style scoped>
 .header-component{
-  display: flex;
   background-color: var(--color-background-mute);
-  line-height: 1.5;
   color: var(--vt-c-black-mute);
   width: 100%;
-  padding: 2.5pt;
-  margin: auto;
-  align-items: center;
-  justify-content:center;
+  gap: 15px;
+  padding: 10px 30px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
 .header-component{
-  padding: 5pt;
+  gap: 35px;
 }
 }
 </style>
