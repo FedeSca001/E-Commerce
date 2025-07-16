@@ -14,7 +14,7 @@ import UserState from './UserState.vue';
     </div>
 </template>
 
-<style scoped>
+<style>
 .header-container {
   display: flex;
   margin: auto;
