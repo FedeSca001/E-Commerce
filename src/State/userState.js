@@ -23,7 +23,7 @@ export const useUserStore = defineStore('user', {
     },
 
     updateUser(updatedUserData) {
-      this.user = { ...this.user, ...updatedUserData }
+      this.user = {...updatedUserData }
     },
   },
 })
