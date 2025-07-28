@@ -27,8 +27,8 @@ const numberOfItems = basket.$state.items.length
 }
 
 img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 span {

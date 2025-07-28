@@ -1,34 +1,97 @@
 <script setup>
-import AsideComponent from './components/AsideComponent.vue';
-import HeaderComponent from './components/Header/HeaderComponent.vue';
+import HeaderComponent from './components/Header/HeaderComponent.vue'
+import AsideComponent from './components/AsideComponent.vue'
+import FooterVue from './components/Footer.vue'
 </script>
 
 <template>
-  <header>
-    <HeaderComponent class="header-component" />
-  </header>
+  <div class="app-layout">
+    <header class="app-header">
+      <HeaderComponent />
+    </header>
 
-  <aside>
-    <AsideComponent msg="Hello ASAIDE Component" />  
-  </aside>
+    <aside class="app-aside">
+      <AsideComponent />
+    </aside>
 
-  <main>
-    <RouterView />
-  </main>
+    <main class="app-main">
+      <RouterView />
+    </main>
+
+    <footer class="app-footer">
+      <FooterVue />
+    </footer>
+  </div>
 </template>
 
 <style scoped>
-.header-component{
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+}
+
+/* HEADER */
+.app-header {
   background-color: var(--color-background-mute);
   color: var(--vt-c-black-mute);
-  width: 100%;
-  gap: 15px;
-  padding: 10px 30px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
 }
 
 @media (min-width: 800px) {
-.header-component{
-  gap: 35px;
+  .app-header {
+    gap: 35px;
+    padding: 1rem 2rem;
+  }
 }
+
+/* ASIDE */
+.app-aside {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .app-aside {
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+}
+
+/* MAIN */
+.app-main {
+  flex: 1;
+  padding: 1.5rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .app-main {
+    padding: 2rem 3rem;
+  }
+}
+
+/* FOOTER */
+.app-footer {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .app-footer {
+    padding: 1rem 2rem;
+    text-align: left;
+  }
 }
 </style>
