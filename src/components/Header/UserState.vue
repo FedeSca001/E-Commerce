@@ -10,16 +10,21 @@ const showDropdown = ref(false);
 
 <template>
   <div 
-    class="user-state-container" @mouseenter="showDropdown = true">
-    <img src="https://cdn-icons-png.flaticon.com/256/1077/1077063.png" alt="userIcon" />
-    <p>{{ nameUser || "Sign In / Register" }}</p>
-
+    class="user-state-container" 
+    @mouseenter="showDropdown = true" 
+    @mouseleave="showDropdown = false"
+  >
+    <div class="user-info">
+      <img src="https://cdn-icons-png.flaticon.com/256/1077/1077063.png" alt="userIcon" />
+      <p>{{ nameUser || "Sign In / Register" }}</p>
+    </div>
 
     <div v-if="!nameUser && showDropdown" 
-        class="dropdown-menu" 
-        @mouseleave="showDropdown = false">
-      <button class="button-signIn" @click="console.log('Login clicked')">Sign In</button>
-      <button @click="console.log('Register clicked')">Register</button>
+      class="dropdown-menu"
+      @mouseenter="showDropdown = true" 
+      @mouseleave="showDropdown = false">
+        <button class="button-signIn" @click="console.log('Login clicked')">Sign In</button>
+        <button @click="console.log('Register clicked')">Register</button>
     </div>
   </div>
 </template>
@@ -29,7 +34,15 @@ const showDropdown = ref(false);
   position: relative;
   font-size: 9pt;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
 
 img {
@@ -61,6 +74,7 @@ img {
   cursor: pointer;
   font-size: 9pt;
 }
+
 .dropdown-menu .button-signIn {
   background-color: var(--vt-c-black) !important;
   color: var(--vt-c-white) !important;
@@ -76,5 +90,4 @@ img {
   background-color: var(--vt-c-black-soft) !important;
   transform: translateY(-1px);
 }
-
 </style>
