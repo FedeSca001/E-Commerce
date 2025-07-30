@@ -54,7 +54,6 @@ img {
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 5px;
   background-color: var(--vt-c-white);
   padding: 8px;
   box-shadow: 0 2px 4px var(--vt-c-black-soft);

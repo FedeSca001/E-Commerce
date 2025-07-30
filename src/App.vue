@@ -29,7 +29,6 @@ import FooterVue from './components/Footer.vue'
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: system-ui, sans-serif;
 }
 
 /* HEADER */
@@ -48,23 +47,15 @@ import FooterVue from './components/Footer.vue'
 @media (min-width: 800px) {
   .app-header {
     gap: 35px;
-    padding: 1rem 2rem;
+    padding: 10px;
   }
 }
 
 /* ASIDE */
 .app-aside {
-  background-color: #f5f5f5;
-  padding: 1rem;
+  background-color: var(--color-background-mute);
   border-bottom: 1px solid #ddd;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .app-aside {
-    text-align: left;
-    padding: 1rem 2rem;
-  }
 }
 
 /* MAIN */
@@ -75,17 +66,16 @@ import FooterVue from './components/Footer.vue'
 
 @media (min-width: 768px) {
   .app-main {
-    padding: 2rem 3rem;
+    padding: 10px;
   }
 }
 
 /* FOOTER */
 .app-footer {
-  background-color: #f1f1f1;
+  background-color: var(--color-background-mute);
   padding: 1rem;
   border-top: 1px solid #ddd;
   text-align: center;
-  font-size: 0.9rem;
 }
 
 @media (min-width: 768px) {

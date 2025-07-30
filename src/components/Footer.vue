@@ -12,9 +12,9 @@
 
 <style scoped>
 .footer-container {
-  background-color: #f1f1f1;
+  background-color: var(--color-background-mute);
   padding: 1.5rem 2rem;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--vt-c-divider-dark-1);
   margin-top: 2rem;
 }
 
