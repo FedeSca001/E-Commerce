@@ -23,8 +23,8 @@ const showDropdown = ref(false);
       class="dropdown-menu"
       @mouseenter="showDropdown = true" 
       @mouseleave="showDropdown = false">
-        <button class="button-signIn" @click="console.log('Login clicked')">Sign In</button>
-        <button @click="console.log('Register clicked')">Register</button>
+        <button class="button-signIn" @click="userStore.setLoginComponent()">Sign In</button>
+        <button @click="userStore.setLoginComponent()">Register</button>
     </div>
   </div>
 </template>
