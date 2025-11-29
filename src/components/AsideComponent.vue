@@ -5,10 +5,10 @@
 <template>
   <nav class="nav-bar">
     <ul class="nav-list">
-      <li class="nav-item">Home</li>
-      <li class="nav-item">Products</li>
-      <li class="nav-item">About Us</li>
-      <li class="nav-item">Contact</li>
+      <router-link to="/" class="nav-item"><li>Home</li></router-link> 
+      <router-link to="/products-list" class="nav-item"><li>Products</li> </router-link>
+      <router-link to="/about-us" class="nav-item"><li >About Us</li></router-link>
+      <router-link to="contact-me" class="nav-item"><li >Contact</li></router-link> 
     </ul>
   </nav>
 </template>
