@@ -1,14 +1,13 @@
 <script setup>
-
 </script>
 
 <template>
   <nav class="nav-bar">
     <ul class="nav-list">
-      <router-link to="/" class="nav-item"><li>Home</li></router-link> 
-      <router-link to="/products-list" class="nav-item"><li>Products</li> </router-link>
-      <router-link to="/about-us" class="nav-item"><li >About Us</li></router-link>
-      <router-link to="contact-me" class="nav-item"><li >Contact</li></router-link> 
+      <li><router-link to="/" class="nav-item">Home</router-link></li>
+      <li><router-link to="/products-list" class="nav-item">Products</router-link></li>
+      <li><router-link to="/about-us" class="nav-item">About Us</router-link></li>
+      <li><router-link to="/contact-me" class="nav-item">Contact</router-link></li>
     </ul>
   </nav>
 </template>
@@ -30,13 +29,16 @@
 }
 
 .nav-item {
+  all: unset;
   font-weight: bold;
-  color: var(--vt-c-black-mute);
+  color: var(--vt-c-black-soft);
+  text-decoration: none;
   cursor: pointer;
+  display: block;
   transition: color 0.3s ease;
 }
 
 .nav-item:hover {
-  color: var(--vt-c-indigo);
+  color: var(--vt-c-bordo);
 }
 </style>
